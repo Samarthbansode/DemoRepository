@@ -13,7 +13,7 @@ public class AddBook {
 	@Test
 	public void post() {
 		RestAssured.baseURI = "http://216.10.245.166";
-		String res = given().header("Content-Type","application/json").body(LibraryPayLoad.libraryPost("Chhava","1234556790"))
+		String res = given().header("Content-Type","application/json").body(LibraryPayLoad.libraryPost("Sam","1234556790"))
 				.post("Library/Addbook.php").
 				then().extract().response().asPrettyString();
 				JsonPath objRes = new JsonPath(res);
